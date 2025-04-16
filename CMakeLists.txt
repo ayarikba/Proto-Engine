@@ -13,7 +13,8 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(glfw)
 
-add_executable(ProtoEngine src/main.cpp)
+file(GLOB_RECURSE SOURCES "src/*.cpp")
+add_executable(ProtoEngine ${SOURCES})
 
 target_include_directories(ProtoEngine PRIVATE include)
 
